@@ -91,7 +91,7 @@
       <v-card-text class="text-center">
         <a
           class="text-blue text-decoration-none"
-          href="#"
+          href="reigter"
           rel="noopener noreferrer"
           target="_blank"
         >
