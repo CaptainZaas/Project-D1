@@ -1,71 +1,53 @@
 <template>
-    <div class="text-center">
-        <v-progress-circular :model-value="value" :rotate="360" :size="100" :width="15" color="teal">
-            {{ value }}
-        </v-progress-circular>
+    <v-card
+      class="mx-auto"
+      max-width="800"
+      rounded="0"
+    >
+      <v-img
+        height="100%"
+        src="https://asset.gecdesigns.com/img/wallpapers/starry-night-sky-reflection-background-hd-wallpaper-sr10012425-1705222416280-cover.webp"
+        cover
+      >
+        <v-avatar
+          color="grey"
+          rounded="100"
+          size="300"
+        >
+          <v-img src="https://scontent.fbkk7-2.fna.fbcdn.net/v/t39.30808-6/412414744_1420456248886792_3975346427053946238_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeESkcGfyHTt_CFlUZgrp0I7gPqzm8h2CoqA-rObyHYKinwwCrjr3kKyM72F1eycD8kEVPn22IC6vOIjtXjKIbNB&_nc_ohc=K7C9y0Df4fsQ7kNvgG-XncC&_nc_ht=scontent.fbkk7-2.fna&oh=00_AYDptC5dqHTWZkw0dTAWTZ5J6Qjr4acujbKxc3nCflJ7GA&oe=66D5BBA9" cover></v-img>
+        </v-avatar>
+        <v-list-item class="text-white" tile="profile-item">
+  <v-list-item-content>
+    <v-list-item-title class="headline">
+      Mr. Warinthon Nanthaboonma (นายวรินทร นันทะบุญมา)
+    </v-list-item-title>
+    <v-list-item-subtitle class="subheading">
+        Code name : Ghost Ronin#1411
+    </v-list-item-subtitle>
+  </v-list-item-content>
+  <v-list-item-action>
+    # เกิดเมื่อวันที่: 15 ตุลาคม 2548 / 15 October 2005 
+  </v-list-item-action>
+  <v-list-item-action>
+    # สถานะ: มีเเฟนเเล้ว / I have a boyfriend.
+  </v-list-item-action>
+  <v-list-item-action>
+    # ที่อยู่บ้าน: บ้านเลขที่ 190 หมู่ 2
+  </v-list-item-action>
+  <v-list-item-action>
+    # ภูมิลำเนา: ต.โคกมั่งงอย อ.คอนสวรรค์ จ.ชัยภูมิ รหัสไปรษณีย์ 36140
+  </v-list-item-action>
+  <v-list-item-action>
+    # กำลังศึกษาอยู่ในระดับชั้น: ปวส.1 เเผนกเทคโนโลยีสารสนเทศ วิทยาลัยเทคนิคชัยภูมิ
+  </v-list-item-action>
+  <v-list-item-action>
+    # สิ่งที่ชอบ: ชอบขับรถมอไซต์ ชอบเที่ยว ชอบออกกำลังกาย ชอบเล่นเกม ชอบกิน เเละชอบนอน
+  </v-list-item-action>
+</v-list-item>
 
-        <v-progress-circular :model-value="value" :rotate="-90" :size="100" :width="15" color="primary">
-            {{ value }}
-        </v-progress-circular>
-
-        <v-progress-circular :model-value="value" :rotate="90" :size="100" :width="15" color="red">
-            {{ value }}
-        </v-progress-circular>
-
-        <v-progress-circular :model-value="value" :rotate="180" :size="100" :width="15" color="pink">
-            {{ value }}
-        </v-progress-circular>
-    </div>
-    <v-card color="basil">
-        <v-card-title class="text-center justify-center py-6">
-            <h1 class="font-weight-bold text-h2 text-basil">
-                Deboard
-            </h1>
-        </v-card-title>
-        <v-parallax height="300" src="https://cdn.vuetifyjs.com/images/parallax/material.jpg">
-            <v-tabs v-model="tab" bg-color="transparent" color="basil" grow>
-                <v-tab v-for="item in items" :key="item" :text="item" :value="item"></v-tab>
-            </v-tabs>
-
-            <v-tabs-window v-model="tab">
-                <v-tabs-window-item v-for="item in items" :key="item" :value="item">
-                    <v-card color="basil" flat>
-                        <v-card-text>{{ text }}</v-card-text>
-                    </v-card>
-                </v-tabs-window-item>
-            </v-tabs-window>
-        </v-parallax>
+      </v-img>
     </v-card>
-
-</template>
+  </template>
 <script>
-export default {
-    data() {
-        return {
-            interval: {},
-            value: 0,
-            tab: 'Appetizers',
-            items: [
-                'Appetizers', 'Entrees', 'Deserts', 'Cocktails',
-            ],
-            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        }
-    },
-    beforeUnmount() {
-        clearInterval(this.interval)
-    },
-    mounted() {
-        this.interval = setInterval(() => {
-            if (this.value === 100) {
-                return (this.value = 0)
-            }
-            this.value += 10
-        }, 1000)
-    },
-}
+
 </script>
-<style scoped>
-.v-progress-circular {
-    margin: 1rem;
-}
-</style>

@@ -152,7 +152,7 @@ export default {
       this.$router.replace("/home");
     },
     listdata(){
-      this.$router.replace("/listdata");
+      this.$router.replace("/show");
     },
     showdata(){
       this.$router.replace("/account");
